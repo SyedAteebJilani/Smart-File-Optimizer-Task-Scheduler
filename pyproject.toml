@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smart-file-optimizer"
+version = "1.0.0"
+description = "Windows desktop OS scheduling and duplicate-file optimization demonstrator."
+requires-python = ">=3.12"
+dependencies = [
+    "PyQt6>=6.7.0",
+    "pyqtgraph>=0.13.7",
+    "psutil>=5.9.8",
+]
+
+[project.scripts]
+smart-file-optimizer = "smart_optimizer.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pyright]
+include = ["src"]
+typeCheckingMode = "strict"
+pythonVersion = "3.12"
+
